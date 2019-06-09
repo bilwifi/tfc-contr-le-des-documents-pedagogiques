@@ -14,8 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
-        'passwords' => 'users',
+        'guard' => 'professeur',
+        'passwords' => 'professeur',
     ],
 
     /*
@@ -46,6 +46,10 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'professeur' => [
+            'driver' => 'session',
+            'provider' => 'professeur',
+        ],
     ],
 
     /*
@@ -73,8 +77,12 @@ return [
 
         // 'users' => [
         //     'driver' => 'database',
-        //     'table' => 'users',
+        //     'table' => 'professeurs',
         // ],
+        'professeur' => [
+             'driver' => 'eloquent',
+             'model' => App\Models\Professeur::class,
+         ],
     ],
 
     /*
