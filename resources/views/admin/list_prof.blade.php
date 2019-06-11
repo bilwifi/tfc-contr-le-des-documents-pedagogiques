@@ -4,12 +4,12 @@
 @section('content')
 <div class="container">
 	<button type="button" class="addModal btn btn-info" data-toggle="modal" data-target="#addModal">
-  		<span class="fas fa-user-plus"> </span> Nouveau professeur
+  		<span class="fas fa-user-plus"> </span> Nouveau enseignant
 	</button><br><br>
 
 	<div class="row">
         <div class="col-md-12">
-         <h2 class="badge badge-pill badge-info">Liste des professeurs</h2>   
+         <h2 class="badge badge-pill badge-info">Liste des enseignants</h2>   
         </div>
   </div>
 	<div class="card bg-light mb-3">

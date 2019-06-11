@@ -15,7 +15,9 @@
 Route::get('/', function () {
     return redirect()->route('login');
 });
-
+Route::get('/test', function () {
+    return view('admin.accueil');
+});
 
 Auth::routes();
 
@@ -28,8 +30,11 @@ Auth::routes();
 |||||||||||||||||||||||||||||||||||||*/
 Route::prefix('admin')->group(function(){
 	Route::name('admin.')->group(function () {
+		Route::get('/', function () {
+		    return view('admin.accueil');
+		})->name('index');
 		// Professeur
-		Route::get('/', 'Admin\DashboardController@index')->name('index');
+		Route::get('/list-controle', 'Admin\DashboardController@index')->name('get_list_controle');
 		Route::get('/liste-professeur', 'Admin\DashboardController@getListProf')->name('get_prof');
 		Route::post('/gestion_profs', 'Admin\DashboardController@storeProf')->name('store_prof');
 		// Contrôle

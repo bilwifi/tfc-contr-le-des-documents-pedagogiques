@@ -79,7 +79,7 @@ code {
     <header>
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand " href="#">CONTRÔLE DES DOCUMENTS </a>
+        <a class="navbar-brand " href="{{ route(auth()->user()->user_role.'.index') }}">CONTRÔLE DES DOCUMENTS </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -101,7 +101,7 @@ code {
             </li>
             @if(auth()->user()->user_role == 'admin')
             <li class="nav-item ">
-              <a class="nav-link" href="{{ route('admin.get_prof') }}">Professeurs <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{{ route('admin.get_prof') }}">Enseignants <span class="sr-only">(current)</span></a>
             </li>
             @endif
             <li class="nav-item ">
